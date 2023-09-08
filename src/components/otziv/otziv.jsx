@@ -22,7 +22,9 @@ export default function Otziv() {
 
                     <ul className="otziv_list">
                         <li className="otziv_item bgc">
+                            <div className="otziv_wrap">
                             <img src={opa1} alt="" className="otziv_img" />
+                            </div>
                             <h2 className="otziv_item-heading">
                                 {t('otzives.name1')}
                             </h2>
@@ -33,7 +35,9 @@ export default function Otziv() {
                         </li>
 
                         <li className="otziv_item bgc">
-                            <img src={opa2} alt="" className="otziv_img" />
+                          <div className="otziv_wrap">
+                          <img src={opa2} alt="" className="otziv_img" />
+                          </div>
                             <h2 className="otziv_item-heading">
                                 {t('otzives.name2')}
                             </h2>

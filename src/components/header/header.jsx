@@ -5,6 +5,9 @@ import uz from '../../assets/uzb.png'
 import ru from '../../assets/ru.png'
 import eng from '../../assets/eng.png'
 import { useEffect, useRef, useState } from 'react';
+import Drawer from '../Drawer';
+
+import burger from '../../assets/burger.png'
 
 
 const images = [`jordan4.jpg`, "nikegreen.jpg", "newbalance.jpg", "converse.jpg", 'adidas.jpg', "gucci.jpg"];
@@ -29,6 +32,15 @@ export default function Header() {
             clearTimeout(timeoutRef.current);
         }
     }
+
+    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+    const openDrawer = () => {
+        setIsDrawerOpen(true);
+    };
+    
+    const closeDrawer = () => {
+        setIsDrawerOpen(false);
+    };
     
     useEffect(() => {
         resetTimeout();
@@ -73,6 +85,45 @@ export default function Header() {
             
             <input className='header_img' value={'eng'} type="image" src={eng}/>
             </form>
+            
+            <img
+            src={burger}
+            onClick={openDrawer}
+            alt=""
+            className="header_burger"
+            />
+
+<Drawer isOpen={isDrawerOpen} closeDrawer={closeDrawer}>
+        <div className="drawer_list">
+        <div>
+        <img src={logo} alt="" className="header_dr" />
+
+        <a onClick={closeDrawer} href="#header" className="header_drawwer">
+            {t('header.link1')}
+            </a>
+            
+            <a onClick={closeDrawer} href="#product" className="header_drawwer">
+            {t('header.link3')}
+            </a>
+            
+            <a onClick={closeDrawer} href="#about" className="header_drawwer">
+            {t('header.link4')}
+        </a>
+        </div>
+
+        <form className='header_formx' onClick={handleClcikLang}>
+            <input className='header_x' value={'uz'} type="image" src={uz}/>
+            
+            <input className='header_x' value={'ru'} type="image" src={ru}/>
+            
+            <input className='header_x' value={'eng'} type="image" src={eng}/>
+            </form> 
+       
+
+
+        
+        </div>
+        </Drawer>
             </div>
             
             <div className="header_bottom">

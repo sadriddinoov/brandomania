@@ -99,3 +99,60 @@
         }
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .pluc {
+    
+        &_heading {
+            font-size: 50px;
+            line-height: 66.82px;
+        }
+    
+        &_list {
+            flex-direction: column;
+        }
+    
+        &_img {
+            width: 100px;
+            height: 100px;
+        }
+        
+        &_item-heading {
+            font-size: 23px;
+            line-height: 28.41px;
+        }
+    
+        &_text {
+            font-size: 17px;
+        }
+    
+        &_absolut {
+            top: -80px;
+            right: -30px;
+        }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .pluc {
+    
+        &_heading {
+            font-size: 30px;
+            line-height: 36.82px;
+        }
+    
+        &_img {
+            width: 80px;
+            height: 80px;
+        }
+        
+        &_item-heading {
+            font-size: 20px;
+            line-height: 24.41px;
+        }
+    
+        &_absolut {
+            display: none;
+        }
+    }
+}
